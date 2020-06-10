@@ -1,0 +1,51 @@
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Recipes</h2>
+                    <h3 class="section-subheading text-muted">Please select a Recipe.</h3>
+                </div>
+                <h1 class="text-center">Tandoori Recipes</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4" *ngFor="let recipe of recipes; let i = index">
+                        <div class="portfolio-item" *ngIf="recipe.category === 'Tandoori'">
+                            <a class="portfolio-link" data-toggle="modal" routerLink="/recipes/{{i}}"
+                                ><div class="portfolio-hover">
+                                    <div class="portfolio-hover-content">See More</div>
+                                </div>
+                                <img class="img-fluid" src="{{recipe.imagePath}}" alt="{{recipe.name}}"
+                            /></a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{recipe.name}}</div>
+                                <div class="portfolio-caption-subheading text-muted">By - {{recipe.chef}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <h1 class="text-center">South Indian Recipes</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4" *ngFor="let recipe of recipes; let i = index">
+                        <div class="portfolio-item" *ngIf="recipe.category === 'South Indian'">
+                            <a class="portfolio-link" data-toggle="modal" routerLink="/recipes/{{i}}"
+                                ><div class="portfolio-hover">
+                                    <div class="portfolio-hover-content">See More</div>
+                                </div>
+                                <img class="img-fluid" src="{{recipe.imagePath}}" alt="{{recipe.name}}"
+                            /></a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{recipe.name}}</div>
+                                <div class="portfolio-caption-subheading text-muted">By - {{recipe.chef}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </section>
+        <br>
+        <br>

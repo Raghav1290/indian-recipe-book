@@ -1,0 +1,12 @@
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">Welcome To Recipe Book!</div>
+                <br>
+                <input id="searchBarRecipe" [(ngModel)]="selectedValue" placeholder="Search Any Recipe..." class="text-center"
+                    [typeahead]="recipes"
+                    typeaheadOptionField="name"
+                    (typeaheadOnSelect)="onSelect($event)"
+                    class="form-control" (click)="onInputTouched()">
+            </div>
+        </header>

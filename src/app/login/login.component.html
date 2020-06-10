@@ -1,0 +1,22 @@
+<br><br><br><br>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <br>
+        <br>
+        <br>
+      <!-- Login Form -->
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="alert alert-danger" *ngIf="error">
+          <p>{{error}}</p>
+        </div>
+        <input type="text" class="fadeIn second" name="email" placeholder="email" ngModel required email>
+        <input type="password" class="fadeIn third" name="password" placeholder="password" ngModel required minlength="6">
+        <br>
+        <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Log In</button>
+        <br>
+        <br>
+      </form>  
+    </div>
+</div>
+
+<router-outlet></router-outlet>

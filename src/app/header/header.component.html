@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-default fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" routerLink="/home"><h6>Recipe Book</h6></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLinkActive="active" routerLink="/home">home</a></li>
+                <li *ngIf="!isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" routerLinkActive="active" routerLink="/about">About</a></li>
+                <li *ngIf="!isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" routerLinkActive="active" routerLink="/recipes" >Recipes</a></li>
+                <li *ngIf="!isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" routerLinkActive="active" routerLink="/contact">Contact</a></li>
+                <li *ngIf="!isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" routerLinkActive="active" routerLink="/check-out">Check out</a></li>
+                <li *ngIf="!isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" routerLinkActive="active" routerLink="/admin">Login</a></li>
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" (click)="onLogout()">Logout</a></li>
+
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link js-scroll-trigger" (click)="onSaveDataToDatabase()">Save Data</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
